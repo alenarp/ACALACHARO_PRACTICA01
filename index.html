@@ -3,23 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A CA LA CHARO | Bar de barrio</title>
+    <title>A CA LA CHARO · Café y barra de barrio en El Carmen, Madrid</title>
+    <meta name="description" content="A CA LA CHARO: el bar de barrio de toda la vida, con café de especialidad y platos tradicionales reinventados. Barrio de El Carmen, Madrid.">
+    <link rel="icon" href="img/logo-azul.svg" type="image/svg+xml">
+
+    <!-- Tipografías: Archivo Black (títulos) y DM Sans (textos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;display=swap" rel="stylesheet">
+
+
+    <!-- Nuestro CSS propio -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header>
+        <nav>
+            <a href="#inicio">
+                <img src="img/logo-azul.svg" alt="A CA LA CHARO">
+            </a>
 
+            <ul>
+                <li><a href="#historia">Nuestra historia</a></li>
+                <li><a href="carta.html">La carta</a></li>
+                <li><a href="#novedades">Novedades</a></li>
+                <li><a href="#club">Club Charo</a></li>
+                <li><a href="#visitanos">Dónde estamos</a></li>
+                <li><a href="#pedidos">Pedir a domicilio</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
 
+        <!-- HERO / PORTADA -->
+        <section id="inicio">
+
+            <video autoplay muted loop playsinline>
+                <source src="video/portada.mp4" type="video/mp4">
+            </video>
+
+            <div>
+                <h1>
+                    Un bar de los<br>
+                    de siempre,<br>
+                    pero distinto.
+                </h1>
+
+                <p>
+                    Pasa, que la Charo ya te está poniendo el café.
+                    Y si quieres tortilla, con cebolla (obvio).
+                </p>
+
+                <a href="carta.html">Ver la carta</a>
+                <a href="#visitanos">Dónde estamos</a>
+            </div>
+
+        </section>
+
     </main>
 
-    <footer>
-
-    </footer>
-
     <script src="js/main.js"></script>
+
 </body>
 </html>
