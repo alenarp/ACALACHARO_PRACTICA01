@@ -10,5 +10,21 @@
     --font-texto: "DM Sans", system-ui, sans-serif;
 }
 
+/* Estilos generales  */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background-color: var(--color-crema);
+    color: var(--color-azul);
+    font-family: var(--font-texto);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
