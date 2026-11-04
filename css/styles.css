@@ -1,0 +1,14 @@
+/* ESTILOS ROOT */
+
+:root {
+    --color-azul: #0d3d82;
+    --color-celeste: #8bbbe5;
+    --color-crema: #f8f4e8;
+    --color-blanco: #ffffff;
+
+    --font-titulo: "Archivo Black", Impact, sans-serif;
+    --font-texto: "DM Sans", system-ui, sans-serif;
+}
+
+
+
