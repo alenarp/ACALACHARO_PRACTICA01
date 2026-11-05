@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -11,64 +10,206 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-<style type="text/tailwindcss">
-    @theme static {
-        --color-azul: #0d3d82;
-        --color-celeste: #8bbbe5;
-        --color-crema: #f8f4e8;
-        --color-blanco: #ffffff;
+    <style type="text/tailwindcss">
+        @theme static {
+            --color-azul: #0d3d82;
+            --color-celeste: #8bbbe5;
+            --color-crema: #f8f4e8;
+            --color-blanco: #ffffff;
 
-        --font-titulo: "Archivo Black", Impact, sans-serif;
-        --font-texto: "DM Sans", system-ui, sans-serif;
-    }
-</style>
-
+            --font-titulo: "Archivo Black", Impact, sans-serif;
+            --font-texto: "DM Sans", system-ui, sans-serif;
+        }
+    </style>
 </head>
 
 <body class="bg-crema font-texto text-azul antialiased">
 
-<header id="cabecera" class="sticky top-0 z-30 border-b-2 border-azul bg-crema/95 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-3">
-        <a href="index.html" class="rounded-lg">
-            <img src="img/logo-azul.svg" alt="A CA LA CHARO, ir al inicio" width="752" height="687" class="logo-azul h-12 w-auto md:h-14">
-        </a>
-        <div class="flex items-center gap-2 lg:order-last">
-            <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu"
-                    class="rounded-full border-2 border-azul bg-azul px-4 py-2 text-sm font-bold text-crema transition hover:bg-crema hover:text-azul lg:hidden">
+    <header id="cabecera" class="sticky top-0 z-30 border-b-2 border-azul bg-crema/95 backdrop-blur">
+        <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-3">
+            <a href="index.html" class="rounded-lg">
+                <img src="img/logo-azul.svg" alt="A CA LA CHARO, ir al inicio" width="752" height="687" class="logo-azul h-12 w-auto md:h-14">
+            </a>
+            <div class="flex items-center gap-2 lg:order-last">
+                <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu"
+                        class="rounded-full border-2 border-azul bg-azul px-4 py-2 text-sm font-bold text-crema transition hover:bg-crema hover:text-azul lg:hidden">
                     Menú
-            </button>
-
+                </button>
             </div>
 
-        <nav class="w-full lg:ml-auto lg:w-auto" aria-label="Principal">
-            <ul id="menu" class="hidden space-y-1 pb-3 lg:flex lg:items-center lg:gap-6 lg:space-y-0 lg:pb-0">
-                <li><a href="index.html#historia" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Nuestra historia</a></li>
-                <li><a href="carta.html" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase" aria-current="page">La carta</a></li>
-                <li><a href="index.html#novedades" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Novedades</a></li>
-                <li><a href="index.html#club" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Club Charo</a></li>
-                <li><a href="index.html#visitanos" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Dónde estamos</a></li>                    
-                <li><a href="index.html#pedidos" class="mt-2 inline-block rounded-full bg-azul px-5 py-2 text-sm font-bold tracking-wider text-crema uppercase transition hover:bg-celeste hover:text-azul lg:mt-0">Pedir a domicilio</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+            <nav class="w-full lg:ml-auto lg:w-auto" aria-label="Principal">
+                <ul id="menu" class="hidden space-y-1 pb-3 lg:flex lg:items-center lg:gap-6 lg:space-y-0 lg:pb-0">
+                    <li><a href="index.html#historia" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Nuestra historia</a></li>
+                    <li><a href="carta.html" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase" aria-current="page">La carta</a></li>
+                    <li><a href="index.html#novedades" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Novedades</a></li>
+                    <li><a href="index.html#club" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Club Charo</a></li>
+                    <li><a href="index.html#visitanos" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Dónde estamos</a></li>
+                    <li><a href="index.html#pedidos" class="mt-2 inline-block rounded-full bg-azul px-5 py-2 text-sm font-bold tracking-wider text-crema uppercase transition hover:bg-celeste hover:text-azul lg:mt-0">Pedir a domicilio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
         
-<section id="carta" class="py-16 md:py-24">
-    <div class="mx-auto max-w-6xl px-5">
-        <div class="text-center">
-            <p class="etiqueta">La carta</p>
-            <h1 class="mt-5 font-titulo text-5xl leading-none tracking-tight md:text-6xl">Nombres raros, platos de siempre</h1>
-            <p class="mx-auto mt-5 max-w-xl text-lg">Si no sabes qué pedir, pregunta a la Charo. Si la Charo no está, pide la tortilla.</p>
-            <p class="mt-3 text-sm font-bold">Pulsa en cualquier producto para ver sus ingredientes y alérgenos.</p>
-        </div>
-    </div>
-</section>
+        <section id="carta" class="py-16 md:py-24">
+            <div class="mx-auto max-w-6xl px-5">
+                <div class="text-center">
+                    <p class="etiqueta">La carta</p>
+                    <h1 class="mt-5 font-titulo text-5xl leading-none tracking-tight md:text-6xl">Nombres raros, platos de siempre</h1>
+                    <p class="mx-auto mt-5 max-w-xl text-lg">Si no sabes qué pedir, pregunta a la Charo. Si la Charo no está, pide la tortilla.</p>
+                    <p class="mt-3 text-sm font-bold">Pulsa en cualquier producto para ver sus ingredientes y alérgenos.</p>
+                </div>
+                
+                <div class="mt-10 flex flex-wrap justify-center gap-3" role="group" aria-label="Filtrar la carta">
+                    <button type="button" class="filtro rounded-full border-2 border-azul px-5 py-2 font-bold transition hover:bg-azul/10 aria-pressed:bg-azul aria-pressed:text-crema dark:border-celeste dark:hover:bg-celeste/15 dark:aria-pressed:bg-celeste dark:aria-pressed:text-noche" data-filtro="todo" aria-pressed="true">Todo</button>
+                    <button type="button" class="filtro rounded-full border-2 border-azul px-5 py-2 font-bold transition hover:bg-azul/10 aria-pressed:bg-azul aria-pressed:text-crema dark:border-celeste dark:hover:bg-celeste/15 dark:aria-pressed:bg-celeste dark:aria-pressed:text-noche" data-filtro="platos" aria-pressed="false">Platos</button>
+                    <button type="button" class="filtro rounded-full border-2 border-azul px-5 py-2 font-bold transition hover:bg-azul/10 aria-pressed:bg-azul aria-pressed:text-crema dark:border-celeste dark:hover:bg-celeste/15 dark:aria-pressed:bg-celeste dark:aria-pressed:text-noche" data-filtro="cafes" aria-pressed="false">Cafés</button>
+                    <button type="button" class="filtro rounded-full border-2 border-azul px-5 py-2 font-bold transition hover:bg-azul/10 aria-pressed:bg-azul aria-pressed:text-crema dark:border-celeste dark:hover:bg-celeste/15 dark:aria-pressed:bg-celeste dark:aria-pressed:text-noche" data-filtro="batidos" aria-pressed="false">Batidos</button>
+                </div>
 
+                <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    
+                    <article class="plato flex cursor-pointer flex-col rounded-3xl border-2 border-azul bg-blanco p-5 dark:border-celeste/40 dark:bg-marino" data-categoria="platos">
+                        <div class="foto-plato h-60 rounded-2xl bg-celeste/25 p-3">
+                            <img src="img/carta/tortilla-charo.webp" alt="Tortilla de patatas con pan en un plato de cerámica" width="600" height="600" loading="lazy" class="size-full object-contain">
+                        </div>
+                        <div class="mt-5 flex items-start justify-between gap-4">
+                            <h3 class="font-titulo text-2xl leading-tight">La tortilla de la Charo</h3>
+                            <p class="precio">5,50 €</p>
+                        </div>
+                        <p class="mt-3">Con cebolla, obvio. Con pan crujiente, obvio también. Solo para los más madrugadores.</p>
+                        <button type="button" class="ver-ficha mt-auto self-start pt-5 text-sm font-bold underline decoration-celeste decoration-2 underline-offset-4 hover:decoration-azul dark:hover:decoration-crema">Ver ingredientes y alérgenos</button>
+                        
+                        <div class="detalle" hidden>
+                            <p>La receta de siempre, cuajada al momento y jugosa por dentro. Se hace cada mañana y, cuando se acaba, se acaba. Por eso decimos que es solo para los más madrugadores.</p>
+                            <h3>Ingredientes</h3>
+                            <ul class="ingredientes"><li>Huevos camperos</li><li>Patata</li><li>Cebolla pochada</li><li>Aceite de oliva virgen extra</li><li>Sal</li><li>Pan de masa madre</li></ul>
+                            <h3>Alérgenos</h3>
+                            <ul class="alergenos"><li>Huevo</li><li>Gluten</li></ul>
+                        </div>
+                    </article>
+                    <article class="plato flex cursor-pointer flex-col rounded-3xl border-2 border-azul bg-blanco p-5 dark:border-celeste/40 dark:bg-marino" data-categoria="platos">
+                        <div class="foto-plato h-60 rounded-2xl bg-celeste/25 p-3">
+                            <img src="img/carta/canarion.webp" alt="Bocadillo relleno con patatas fritas en una bandeja" width="600" height="600" loading="lazy" class="size-full object-contain">
+                        </div>
+                        <div class="mt-5 flex items-start justify-between gap-4">
+                            <h3 class="font-titulo text-2xl leading-tight">El Canarión</h3>
+                            <p class="precio">9,50 €</p>
+                        </div>
+                        <p class="mt-3">Pata asada como la de las fiestas del pueblo y un alioli cítrico que no pide permiso.</p>
+                        <button type="button" class="ver-ficha mt-auto self-start pt-5 text-sm font-bold underline decoration-celeste decoration-2 underline-offset-4 hover:decoration-azul dark:hover:decoration-crema">Ver ingredientes y alérgenos</button>
+                        
+                        <div class="detalle" hidden>
+                            <p>Un homenaje a los bocadillos de pata de las fiestas canarias: carne asada a fuego lento durante horas, ensalada fresca, queso y un alioli con limón y naranja. Viene con patatas.</p>
+                            <h3>Ingredientes</h3>
+                            <ul class="ingredientes"><li>Pan de barra crujiente</li><li>Pata de cerdo asada</li><li>Lechuga y tomate</li><li>Queso tierno</li><li>Alioli cítrico (ajo, limón y naranja)</li><li>Patatas fritas</li></ul>
+                            <h3>Alérgenos</h3>
+                            <ul class="alergenos"><li>Gluten</li><li>Leche</li><li>Huevo</li></ul>
+                        </div>
+                    </article>
+                    <article class="plato flex cursor-pointer flex-col rounded-3xl border-2 border-azul bg-blanco p-5 dark:border-celeste/40 dark:bg-marino" data-categoria="platos">
+                        <div class="foto-plato h-60 rounded-2xl bg-celeste/25 p-3">
+                            <img src="img/carta/chismosa.webp" alt="Bol de yogur con mango, plátano, arándanos y coco" width="600" height="600" loading="lazy" class="size-full object-contain">
+                        </div>
+                        <div class="mt-5 flex items-start justify-between gap-4">
+                            <h3 class="font-titulo text-2xl leading-tight">La Chismosa</h3>
+                            <p class="precio">8,50 €</p>
+                        </div>
+                        <p class="mt-3">Porque hoy te has levantado a correr y necesitas sentirte sano. Y contarlo.</p>
+                        <button type="button" class="ver-ficha mt-auto self-start pt-5 text-sm font-bold underline decoration-celeste decoration-2 underline-offset-4 hover:decoration-azul dark:hover:decoration-crema">Ver ingredientes y alérgenos</button>
+                        
+                        <div class="detalle" hidden>
+                            <p>El desayuno más comentado de la barra. Yogur batido con fruta fresca de temporada, coco y una cucharada generosa de crema de cacahuete. Ideal para quien quiere cuidarse… y que se entere todo el barrio.</p>
+                            <h3>Ingredientes</h3>
+                            <ul class="ingredientes"><li>Yogur natural batido</li><li>Mango</li><li>Pitaya</li><li>Plátano</li><li>Arándanos</li><li>Coco rallado</li><li>Crema de cacahuete</li><li>Granola de avena</li></ul>
+                            <h3>Alérgenos</h3>
+                            <ul class="alergenos"><li>Leche</li><li>Cacahuetes</li><li>Gluten</li></ul>
+                        </div>
+                    </article>
+                    <article class="plato flex cursor-pointer flex-col rounded-3xl border-2 border-azul bg-blanco p-5 dark:border-celeste/40 dark:bg-marino" data-categoria="platos">
+                        <div class="foto-plato h-60 rounded-2xl bg-celeste/25 p-3">
+                            <img src="img/carta/club-paula.webp" alt="Sándwich de pollo con queso rallado y patatas en un plato de cerámica" width="600" height="600" loading="lazy" class="size-full object-contain">
+                        </div>
+                        <div class="mt-5 flex items-start justify-between gap-4">
+                            <h3 class="font-titulo text-2xl leading-tight">El Club de Paula</h3>
+                            <p class="precio">10,50 €</p>
+                        </div>
+                        <p class="mt-3">Lo que aprendió Paula de enamorarse de un canario: que el queso, cuanto más, mejor.</p>
+                        <button type="button" class="ver-ficha mt-auto self-start pt-5 text-sm font-bold underline decoration-celeste decoration-2 underline-offset-4 hover:decoration-azul dark:hover:decoration-crema">Ver ingredientes y alérgenos</button>
+                        
+                        <div class="detalle" hidden>
+                            <p>Nuestro sándwich club con acento canario: pollo, ensalada fresca, guanciale crujiente y mucho queso de Valsequillo. Se sirve con patatas.</p>
+                            <h3>Ingredientes</h3>
+                            <ul class="ingredientes"><li>Pan de molde tostado</li><li>Pollo a la plancha</li><li>Ensalada fresca</li><li>Guanciale crujiente</li><li>Queso de Valsequillo</li><li>Mayonesa de la casa</li><li>Patatas chips</li></ul>
+                            <h3>Alérgenos</h3>
+                            <ul class="alergenos"><li>Gluten</li><li>Leche</li><li>Huevo</li></ul>
+                        </div>
+                    </article>
+                    <article class="plato flex cursor-pointer flex-col rounded-3xl border-2 border-azul bg-blanco p-5 dark:border-celeste/40 dark:bg-marino" data-categoria="platos">
+                        <div class="foto-plato h-60 rounded-2xl bg-celeste/25 p-3">
+                            <img src="img/carta/moderno-barrio.webp" alt="Tostadas de aguacate con huevo, tomates cherry y queso" width="600" height="600" loading="lazy" class="size-full object-contain">
+                        </div>
+                        <div class="mt-5 flex items-start justify-between gap-4">
+                            <h3 class="font-titulo text-2xl leading-tight">El moderno del barrio</h3>
+                            <p class="precio">9,00 €</p>
+                        </div>
+                        <p class="mt-3">Sí, tenemos tostada de aguacate. La Charo también se actualiza.</p>
+                        <button type="button" class="ver-ficha mt-auto self-start pt-5 text-sm font-bold underline decoration-celeste decoration-2 underline-offset-4 hover:decoration-azul dark:hover:decoration-crema">Ver ingredientes y alérgenos</button>
+                        
+                        <div class="detalle" hidden>
+                            <p>Pan de masa madre tostado con aguacate machacado, huevo poché, tomates cherry y queso fresco. El plato que la Charo juraba que nunca pondría en la carta.</p>
+                            <h3>Ingredientes</h3>
+                            <ul class="ingredientes"><li>Pan de masa madre</li><li>Aguacate</li><li>Huevo poché</li><li>Tomate cherry</li><li>Queso fresco</li><li>Aceite de oliva virgen extra</li><li>Albahaca</li></ul>
+                            <h3>Alérgenos</h3>
+                            <ul class="alergenos"><li>Gluten</li><li>Huevo</li><li>Leche</li></ul>
+                        </div>
+                    </article>
+                    <article class="plato flex cursor-pointer flex-col rounded-3xl border-2 border-azul bg-blanco p-5 dark:border-celeste/40 dark:bg-marino" data-categoria="platos">
+                        <div class="foto-plato h-60 rounded-2xl bg-celeste/25 p-3">
+                            <img src="img/carta/frances.webp" alt="Croissant mixto gratinado con patatas y pepinillos" width="600" height="600" loading="lazy" class="size-full object-contain">
+                        </div>
+                        <div class="mt-5 flex items-start justify-between gap-4">
+                            <h3 class="font-titulo text-2xl leading-tight">El francés se vino arriba</h3>
+                            <p class="precio">7,50 €</p>
+                        </div>
+                        <p class="mt-3">Llegó de París, probó el jamón york gratinado y ya no quiso volver.</p>
+                        <button type="button" class="ver-ficha mt-auto self-start pt-5 text-sm font-bold underline decoration-celeste decoration-2 underline-offset-4 hover:decoration-azul dark:hover:decoration-crema">Ver ingredientes y alérgenos</button>
+                        
+                        <div class="detalle" hidden>
+                            <p>Croissant de mantequilla relleno de jamón cocido y queso, gratinado al horno hasta que cruje. Lo acompañamos con patatas y pepinillos.</p>
+                            <h3>Ingredientes</h3>
+                            <ul class="ingredientes"><li>Croissant de mantequilla</li><li>Jamón cocido</li><li>Queso emmental</li><li>Patatas chips</li><li>Pepinillos en vinagre</li></ul>
+                            <h3>Alérgenos</h3>
+                            <ul class="alergenos"><li>Gluten</li><li>Leche</li><li>Huevo</li><li>Sulfitos</li></ul>
+                        </div>
+                    </article>
+                    <article class="plato flex cursor-pointer flex-col rounded-3xl border-2 border-azul bg-blanco p-5 dark:border-celeste/40 dark:bg-marino" data-categoria="platos">
+                        <div class="foto-plato h-60 rounded-2xl bg-celeste/25 p-3">
+                            <img src="img/carta/domingo-sin-resaca.webp" alt="Brunch con huevos revueltos, salmón, aguacate y patatas" width="600" height="600" loading="lazy" class="size-full object-contain">
+                        </div>
+                        <div class="mt-5 flex items-start justify-between gap-4">
+                            <h3 class="font-titulo text-2xl leading-tight">El domingo sin resaca</h3>
+                            <p class="precio">12,50 €</p>
+                        </div>
+                        <p class="mt-3">Para cuando el sábado se alargó un poquito. No preguntamos, solo servimos.</p>
+                        <button type="button" class="ver-ficha mt-auto self-start pt-5 text-sm font-bold underline decoration-celeste decoration-2 underline-offset-4 hover:decoration-azul dark:hover:decoration-crema">Ver ingredientes y alérgenos</button>
+                        
+                        <div class="detalle" hidden>
+                            <p>Nuestro brunch más completo: huevos revueltos cremosos, salmón ahumado, aguacate, patatas asadas y ensalada. Lo que el cuerpo pide un domingo por la mañana.</p>
+                            <h3>Ingredientes</h3>
+                            <ul class="ingredientes"><li>Huevos revueltos</li><li>Salmón ahumado</li><li>Aguacate</li><li>Patatas asadas</li><li>Rúcula y rabanito</li><li>Tomate cherry</li><li>Mantequilla</li></ul>
+                            <h3>Alérgenos</h3>
+                            <ul class="alergenos"><li>Huevo</li><li>Pescado</li><li>Leche</li></ul>
+                        </div>
+                    </article>
+
+
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="js/main.js"></script>
-
 </body>
 </html>
