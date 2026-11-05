@@ -15,6 +15,26 @@
 
     <!-- Nuestro CSS propio -->
     <link rel="stylesheet" href="css/styles.css">
+
+<!-- Tailwind y los colores de nuestra web -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+
+    @theme static {
+        --color-azul: #0d3d82;
+        --color-celeste: #8bbbe5;
+        --color-crema: #f8f4e8;
+        --color-blanco: #ffffff;
+        --color-noche: #071a3a;
+        --color-marino: #0f2f63;
+
+        --font-titulo: "Archivo Black", Impact, sans-serif;
+        --font-texto: "DM Sans", system-ui, sans-serif;
+    }
+</style>
+
 </head>
 
 <body>
@@ -37,14 +57,19 @@
                 </button>
 
                 <!-- Botón del menú (en móvil y tablet) -->
-                <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu"
-                        class="rounded-full border-2 border-azul bg-azul px-4 py-2 text-sm font-bold text-crema transition hover:bg-crema hover:text-azul lg:hidden dark:border-celeste dark:bg-celeste dark:text-noche">
-                    Menú
+                <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"
+                        class="relative grid size-11 place-items-center rounded-full border-2 border-azul bg-azul text-crema transition lg:hidden dark:border-celeste dark:bg-celeste dark:text-noche">
+                    <span class="hamburguesa" aria-hidden="true">
+                        <span class="hamburguesa-linea"></span>
+                        <span class="hamburguesa-linea"></span>
+                        <span class="hamburguesa-linea"></span>
+                    </span>
                 </button>
             </div>
 
-            <nav class="w-full lg:ml-auto lg:w-auto" aria-label="Principal">
-                <ul id="menu" class="hidden space-y-1 pb-3 lg:flex lg:items-center lg:gap-6 lg:space-y-0 lg:pb-0">
+            
+            <nav id="menu" class="w-full lg:ml-auto lg:w-auto" aria-label="Principal">
+                <ul class="space-y-1 pb-3 lg:flex lg:items-center lg:gap-6 lg:space-y-0 lg:pb-0">
                     <li><a href="#historia" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Nuestra historia</a></li>
                     <li><a href="carta.html" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">La carta</a></li>
                     <li><a href="#novedades" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Novedades</a></li>
@@ -348,7 +373,6 @@
         </div>
     </footer>
 
-
     <!-- Librerias de JS -->
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <!-- AOS y Swiper -->
@@ -356,7 +380,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@14/swiper-bundle.min.js"></script>
 
     <!-- Menú, modo oscuro y cabecera -->
-    <script src="js/interfaz.js"></script>
+    <script src="js/main.js"></script>
     <!-- Acordeón del Club Charo -->
     <script src="js/club.js"></script>
     <!-- Slider y animaciones al hacer scroll -->
