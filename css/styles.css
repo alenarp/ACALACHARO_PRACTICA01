@@ -415,3 +415,55 @@
     border-color: var(--color-crema);
     color: var(--color-azul);
 }
+
+@media (max-width: 1023px) {
+    html.menu-abierto .cabecera-transparente {
+        background-color: var(--color-azul);
+        border-color: var(--color-azul);
+        color: var(--color-crema);
+    }
+
+    html.menu-abierto .cabecera-transparente .logo-azul {
+        display: none;
+    }
+
+    html.menu-abierto .cabecera-transparente .logo-blanco {
+        display: block;
+    }
+
+    html.menu-abierto .cabecera-transparente #boton-menu,
+    html.menu-abierto .cabecera-transparente #boton-tema {
+        background-color: transparent;
+        border-color: var(--color-crema);
+        color: var(--color-crema);
+    }
+
+    html.menu-abierto .cabecera-transparente .enlace-menu {
+        color: var(--color-crema);
+    }
+
+    html.menu-abierto .cabecera-transparente #menu li:last-child a {
+        background-color: var(--color-celeste);
+        border-color: var(--color-celeste);
+        color: var(--color-azul);
+    }
+}
+
+/* controles slider */
+.carteles {
+    --swiper-theme-color: var(--color-crema);
+    --swiper-navigation-size: 26px;
+    --swiper-pagination-bullet-inactive-color: var(--color-crema);
+    padding-bottom: 3rem;
+}
+
+/* Flechas redondas */
+.carteles .swiper-button-prev,
+.carteles .swiper-button-next {
+    width: 44px;
+    height: 44px;
+    margin-top: -2.5rem;
+    border-radius: 999px;
+    background: var(--color-azul);
+    color: var(--color-crema);
+}
