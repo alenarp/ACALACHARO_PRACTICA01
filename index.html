@@ -164,6 +164,68 @@
 
         </section>
 
+        <!-- ================= CLUB CHARO (FIDELIZACIÓN) ================= -->
+        <section id="club" class="pt-20 md:pt-28">
+            <div class="mx-auto max-w-3xl px-5 text-center" data-aos="fade-up">
+                <h2>
+                    <img src="img/logo-club-azul.svg" alt="El club de la Charo" width="1684" height="1090" class="mx-auto w-64 md:w-80 dark:hidden">
+                    <img src="img/logo-club-blanco.svg" alt="El club de la Charo" width="1684" height="1090" class="mx-auto hidden w-64 md:w-80 dark:block">
+                </h2>
+                <p class="mt-6 text-lg">Cada 5 sellos, subes de nivel. Pide tu tarjeta en la barra.</p>
+            </div>
+
+            <!-- Acordeón de niveles (jQuery, en js/club.js) -->
+            <div class="mt-12 border-t-2 border-azul dark:border-celeste/40">
+                <!-- Nivel 1: Charita -->
+                <article class="nivel bg-blanco dark:bg-marino">
+                    <h3>
+                        <button type="button" class="nivel-boton mx-auto block w-full max-w-6xl px-5 py-7 text-center" aria-expanded="false" aria-controls="nivel-1">
+                            <span class="block font-titulo text-5xl leading-none tracking-tight sm:text-7xl lg:text-8xl">Charita</span>
+                            <span class="mt-3 inline-flex items-center gap-3 text-xs font-bold tracking-widest uppercase sm:text-sm">
+                                Nivel 1 · De 0 a 5 sellos · Empiezas aquí
+                                <span class="mas grid size-7 place-items-center rounded-full border-2 border-current" aria-hidden="true"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M12 4v16M4 12h16"/></svg></span>
+                            </span>
+                        </button>
+                    </h3>
+                    <div id="nivel-1" class="nivel-detalle hidden">
+                        <div class="mx-auto grid max-w-4xl gap-8 px-5 pb-12 md:grid-cols-[auto_1fr] md:items-start">
+                            <span class="mx-auto grid size-24 place-items-center rounded-full bg-crema"><img src="img/iconos/cafe.svg" alt="" width="530" height="502" class="w-20"></span>
+                            <div>
+                                <p class="text-lg font-medium">Acabas de llegar al barrio y ya te estamos guardando sitio en la barra.</p>
+                                <ul class="ventajas mt-6 grid gap-4 sm:grid-cols-2">
+                                <li>Tu primer café con leche, a mitad de precio.</li>
+                                <li>Con 5 sellos, un café de regalo.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!-- Nivel 2: Charote -->
+                <article class="nivel bg-celeste/50 dark:bg-celeste/20">
+                    <h3>
+                        <button type="button" class="nivel-boton mx-auto block w-full max-w-6xl px-5 py-7 text-center" aria-expanded="false" aria-controls="nivel-2">
+                            <span class="block font-titulo text-5xl leading-none tracking-tight sm:text-7xl lg:text-8xl">Charote</span>
+                            <span class="mt-3 inline-flex items-center gap-3 text-xs font-bold tracking-widest uppercase sm:text-sm">
+                                Nivel 2 · De 6 a 10 sellos
+                                <span class="mas grid size-7 place-items-center rounded-full border-2 border-current" aria-hidden="true"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M12 4v16M4 12h16"/></svg></span>
+                            </span>
+                        </button>
+                    </h3>
+                    <div id="nivel-2" class="nivel-detalle hidden">
+                        <div class="mx-auto grid max-w-4xl gap-8 px-5 pb-12 md:grid-cols-[auto_1fr] md:items-start">
+                            <span class="mx-auto grid size-24 place-items-center rounded-full bg-crema"><img src="img/iconos/croissant.svg" alt="" width="530" height="502" class="w-20"></span>
+                            <div>
+                                <p class="text-lg font-medium">Ya te sabemos el nombre y cómo te gusta el café (templadito, ¿verdad?).</p>
+                                <ul class="ventajas mt-6 grid gap-4 sm:grid-cols-2">
+                                <li>Todo lo de Charita.</li>
+                                <li>Un pincho de tortilla gratis con tu café de los lunes.</li>
+                                <li>Un batido de regalo en la semana de tu cumpleaños.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
     </main>
 
     <script src="js/main.js"></script>
