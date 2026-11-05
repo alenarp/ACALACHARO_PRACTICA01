@@ -55,3 +55,16 @@ botonTema.addEventListener('click', function () {
     botonTema.setAttribute('aria-pressed', oscuro);
     localStorage.setItem('tema', oscuro ? 'oscuro' : 'claro');
 });
+
+
+ //fondocabecera cuando bajamos por la página
+const cabecera = document.querySelector('.cabecera-transparente');
+
+if (cabecera) {
+    function actualizarCabecera() {
+        cabecera.classList.toggle('con-fondo', window.scrollY > 50);
+    }
+
+    window.addEventListener('scroll', actualizarCabecera);
+    actualizarCabecera();
+}

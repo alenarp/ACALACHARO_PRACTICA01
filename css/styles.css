@@ -467,3 +467,15 @@
     background: var(--color-azul);
     color: var(--color-crema);
 }
+
+/* Las rayitas del menú se ven azules sobre el botón crema de la portada */
+.cabecera-transparente:not(.con-fondo) .hamburguesa-linea {
+    background-color: var(--color-azul);
+}
+
+/* Cuando abrimos el menú, vuelven a ser crema para que se vea la X */
+@media (max-width: 1023px) {
+    html.menu-abierto .cabecera-transparente .hamburguesa-linea {
+        background-color: var(--color-crema);
+    }
+}
