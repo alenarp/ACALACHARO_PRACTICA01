@@ -401,6 +401,21 @@
         </section>
     </main>
 
+    <dialog id="ficha" class="ficha m-auto max-h-[90vh] w-[calc(100%-2rem)] max-w-3xl overflow-y-auto rounded-3xl border-2 border-azul bg-crema p-0 text-azul dark:border-celeste/40 dark:bg-noche dark:text-crema" aria-labelledby="ficha-nombre">
+        <div class="grid md:grid-cols-2">
+            <div class="fondo-patron patron-suave grid place-items-center p-6 md:p-8">
+                <img id="ficha-imagen" src="img/carta/tortilla-charo.webp" alt="" width="600" height="600" class="max-h-56 w-auto object-contain md:max-h-96">
+            </div>
+            <div class="relative p-6 md:p-8">
+                        class="absolute top-4 right-4 grid size-10 place-items-center rounded-full border-2 border-azul text-lg font-bold transition hover:bg-azul hover:text-crema dark:border-celeste dark:hover:bg-celeste dark:hover:text-noche">✕</button>
+                <p id="ficha-categoria" class="etiqueta">Platos</p>
+                <h2 id="ficha-nombre" class="mt-4 pr-10 font-titulo text-3xl leading-tight">Producto</h2>
+                <p id="ficha-precio" class="precio mt-4 inline-block">0,00 €</p>
+                <div id="ficha-detalle" class="ficha-detalle mt-5"></div>
+            </div>
+        </div>
+    </dialog>
+
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/carta.js"></script>
