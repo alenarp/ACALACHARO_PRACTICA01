@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La carta · A CA LA CHARO</title>
+    <meta name="description" content="La carta de A CA LA CHARO: platos de siempre con nombres raros, café de especialidad y batidos de fruta de verdad.">
+    <link rel="icon" href="img/logo-azul.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<style type="text/tailwindcss">
+    @theme static {
+        --color-azul: #0d3d82;
+        --color-celeste: #8bbbe5;
+        --color-crema: #f8f4e8;
+        --color-blanco: #ffffff;
+
+        --font-titulo: "Archivo Black", Impact, sans-serif;
+        --font-texto: "DM Sans", system-ui, sans-serif;
+    }
+</style>
+
+</head>
+
+<body class="bg-crema font-texto text-azul antialiased">
+
+<header id="cabecera" class="sticky top-0 z-30 border-b-2 border-azul bg-crema/95 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-3">
+        <a href="index.html" class="rounded-lg">
+            <img src="img/logo-azul.svg" alt="A CA LA CHARO, ir al inicio" width="752" height="687" class="logo-azul h-12 w-auto md:h-14">
+        </a>
+        <div class="flex items-center gap-2 lg:order-last">
+            <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu"
+                    class="rounded-full border-2 border-azul bg-azul px-4 py-2 text-sm font-bold text-crema transition hover:bg-crema hover:text-azul lg:hidden">
+                    Menú
+            </button>
+
+            </div>
+
+        <nav class="w-full lg:ml-auto lg:w-auto" aria-label="Principal">
+            <ul id="menu" class="hidden space-y-1 pb-3 lg:flex lg:items-center lg:gap-6 lg:space-y-0 lg:pb-0">
+                <li><a href="index.html#historia" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Nuestra historia</a></li>
+                <li><a href="carta.html" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase" aria-current="page">La carta</a></li>
+                <li><a href="index.html#novedades" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Novedades</a></li>
+                <li><a href="index.html#club" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Club Charo</a></li>
+                <li><a href="index.html#visitanos" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Dónde estamos</a></li>                    
+                <li><a href="index.html#pedidos" class="mt-2 inline-block rounded-full bg-azul px-5 py-2 text-sm font-bold tracking-wider text-crema uppercase transition hover:bg-celeste hover:text-azul lg:mt-0">Pedir a domicilio</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        
+<section id="carta" class="py-16 md:py-24">
+    <div class="mx-auto max-w-6xl px-5">
+        <div class="text-center">
+            <p class="etiqueta">La carta</p>
+            <h1 class="mt-5 font-titulo text-5xl leading-none tracking-tight md:text-6xl">Nombres raros, platos de siempre</h1>
+            <p class="mx-auto mt-5 max-w-xl text-lg">Si no sabes qué pedir, pregunta a la Charo. Si la Charo no está, pide la tortilla.</p>
+            <p class="mt-3 text-sm font-bold">Pulsa en cualquier producto para ver sus ingredientes y alérgenos.</p>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
