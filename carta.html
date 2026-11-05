@@ -9,9 +9,23 @@
     <meta name="description" content="La carta de A CA LA CHARO: platos de siempre con nombres raros, café de especialidad y batidos de fruta de verdad.">
     <link rel="icon" href="img/logo-azul.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<style type="text/tailwindcss">
+    @theme static {
+        --color-azul: #0d3d82;
+        --color-celeste: #8bbbe5;
+        --color-crema: #f8f4e8;
+        --color-blanco: #ffffff;
+
+        --font-titulo: "Archivo Black", Impact, sans-serif;
+        --font-texto: "DM Sans", system-ui, sans-serif;
+    }
+</style>
+
 </head>
 
-<body>
+<body class="bg-crema font-texto text-azul antialiased">
 
     <header>
         <nav>
@@ -31,19 +45,17 @@
     </header>
 
     <main>
-
-        <section id="carta">
-            <h1>Nombres raros, platos de siempre</h1>
-
-            <p>
-                Si no sabes qué pedir, pregunta a la Charo.
-                Si la Charo no está, pide la tortilla.
-            </p>
-
-            <p>
-                Pulsa en cualquier producto para ver sus ingredientes y alérgenos.
-            </p>
-        </section>
+        
+<section id="carta" class="py-16 md:py-24">
+    <div class="mx-auto max-w-6xl px-5">
+        <div class="text-center">
+            <p class="etiqueta">La carta</p>
+            <h1 class="mt-5 font-titulo text-5xl leading-none tracking-tight md:text-6xl">Nombres raros, platos de siempre</h1>
+            <p class="mx-auto mt-5 max-w-xl text-lg">Si no sabes qué pedir, pregunta a la Charo. Si la Charo no está, pide la tortilla.</p>
+            <p class="mt-3 text-sm font-bold">Pulsa en cualquier producto para ver sus ingredientes y alérgenos.</p>
+        </div>
+    </div>
+</section>
 
     </main>
 
