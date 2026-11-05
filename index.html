@@ -59,27 +59,28 @@
     <main>
 
         <!-- HERO / PORTADA -->
-        <section id="inicio">
-
-            <video autoplay muted loop playsinline>
+         <!-- BANNER SUPERIOR -->
+        <!-- VÍDEO DE FONDO Y DEGRADADO AZUL SUTIL POR ENCIMA DEL VÍDEO -->
+        <section id="inicio" class="relative flex min-h-svh items-end overflow-hidden">
+            <video class="absolute inset-0 size-full object-cover" autoplay muted loop playsinline poster="img/portada-video.webp" aria-hidden="true">
                 <source src="video/portada.mp4" type="video/mp4">
             </video>
+            <!-- Degradado azul: más fuerte a la izquierda, donde va el texto (en móvil, un poco de azul en toda la imagen) -->
+            <div class="absolute inset-0 bg-azul/40 bg-linear-to-r from-azul/90 via-azul/50 to-transparent md:bg-transparent dark:bg-noche/40 dark:from-noche/90 dark:via-noche/50 md:dark:bg-transparent"></div>
+            <!-- Sombra suave arriba para que se lea la cabecera -->
+            <div class="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-azul/60 to-transparent dark:from-noche/60"></div>
 
-            <div>
-                <h1>
-                    Un bar de los<br>
-                    de siempre,<br>
-                    pero distinto.
+            <div class="relative mx-auto w-full max-w-6xl px-5 pt-36 pb-20 text-crema md:pb-28">
+                <h1 class="max-w-4xl font-titulo text-5xl leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl">
+                    Un bar de los<br>de siempre,<br><span class="trazo text-celeste">pero distinto.</span>
                 </h1>
-
-                <p>
-                    Pasa, que la Charo ya te está poniendo el café.
-                    Y si quieres tortilla, con cebolla (obvio).
-                </p>
-
-                <a href="carta.html">Ver la carta</a>
-                <a href="#visitanos">Dónde estamos</a>
+                <p class="mt-10 max-w-md text-lg">Pasa, que la Charo ya te está poniendo el café. Y si quieres tortilla, con cebolla (obvio).</p>
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <a href="carta.html" class="rounded-full border-2 border-crema bg-crema px-8 py-3 text-sm font-bold tracking-[0.2em] text-azul uppercase transition hover:-translate-y-0.5 hover:border-celeste hover:bg-celeste">Ver la carta</a>
+                    <a href="#visitanos" class="rounded-full border-2 border-crema px-8 py-3 text-sm font-bold tracking-[0.2em] uppercase transition hover:-translate-y-0.5 hover:bg-crema hover:text-azul">Dónde estamos</a>
+                </div>
             </div>
+        </section>
 
         </section>
 
