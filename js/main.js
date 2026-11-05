@@ -1,3 +1,4 @@
+
 const botonMenu = document.querySelector('#boton-menu');
 const menu = document.querySelector('#menu');
 const enlacesMenu = document.querySelectorAll('#menu a');
@@ -11,7 +12,7 @@ botonMenu.addEventListener('click', function () {
     botonMenu.textContent = abierto ? 'Cerrar' : 'Menú';
 });
 
-// cerrar menú al pulsar un enlace del menú
+// Cerrar menú al pulsar un enlace
 enlacesMenu.forEach(function (enlace) {
     enlace.addEventListener('click', function () {
         menu.classList.add('hidden');
@@ -20,28 +21,7 @@ enlacesMenu.forEach(function (enlace) {
     });
 });
 
-// Modo oscuro- modo claro
-
-const botonMenu = document.querySelector('#boton-menu');
-const menu = document.querySelector('#menu');
-const enlacesMenu = document.querySelectorAll('#menu a');
-
-botonMenu.addEventListener('click', function () {
-    menu.classList.toggle('hidden');
-
-    const abierto = !menu.classList.contains('hidden');
-    botonMenu.setAttribute('aria-expanded', abierto);
-    botonMenu.textContent = abierto ? 'Cerrar' : 'Menú';
-});
-
-enlacesMenu.forEach(function (enlace) {
-    enlace.addEventListener('click', function () {
-        menu.classList.add('hidden');
-        botonMenu.setAttribute('aria-expanded', 'false');
-        botonMenu.textContent = 'Menú';
-    });
-});
-
+// Modo oscuro - modo claro
 const botonTema = document.querySelector('#boton-tema');
 const html = document.documentElement;
 
