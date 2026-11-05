@@ -384,3 +384,34 @@
     outline-offset: -12px;
     box-shadow: 10px 10px 0 var(--color-celeste);
 }
+
+
+/* Cabecera transparente cuando estamos sobre el vídeo */
+.cabecera-transparente:not(.con-fondo) {
+    background-color: transparent;
+    border-color: rgb(248 244 232 / 0.3);
+    backdrop-filter: none;
+    color: var(--color-crema);
+}
+
+/* cambio al logo blanco para que se vea sobre el vídeo */
+.cabecera-transparente:not(.con-fondo) .logo-azul {
+    display: none;
+}
+
+.cabecera-transparente:not(.con-fondo) .logo-blanco {
+    display: block;
+}
+
+.cabecera-transparente:not(.con-fondo) .enlace-menu,
+.cabecera-transparente:not(.con-fondo) #boton-tema {
+    color: var(--color-crema);
+    border-color: var(--color-crema);
+}
+
+.cabecera-transparente:not(.con-fondo) #boton-menu,
+.cabecera-transparente:not(.con-fondo) #menu li:last-child a {
+    background-color: var(--color-crema);
+    border-color: var(--color-crema);
+    color: var(--color-azul);
+}
