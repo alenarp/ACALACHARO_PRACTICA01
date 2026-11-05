@@ -1,0 +1,59 @@
+/* ESTILOS ROOT */
+
+:root {
+    --color-azul: #0d3d82;
+    --color-celeste: #8bbbe5;
+    --color-crema: #f8f4e8;
+    --color-blanco: #ffffff;
+
+    --font-titulo: "Archivo Black", Impact, sans-serif;
+    --font-texto: "DM Sans", system-ui, sans-serif;
+}
+
+/* Estilos generales  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-crema);
+    color: var(--color-azul);
+    font-family: var(--font-texto);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+h1, h2, h3 {
+    font-family: var(--font-titulo);
+}
+
+
+img, video {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+::selection {
+    background: var(--color-celeste);
+    color: var(--color-azul);
+}
+
+:focus-visible {
+    outline: 3px solid var(--color-celeste);
+    outline-offset: 3px;
+}
