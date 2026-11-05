@@ -15,6 +15,26 @@
 
     <!-- Nuestro CSS propio -->
     <link rel="stylesheet" href="css/styles.css">
+
+<!-- Tailwind y los colores de nuestra web -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+
+    @theme static {
+        --color-azul: #0d3d82;
+        --color-celeste: #8bbbe5;
+        --color-crema: #f8f4e8;
+        --color-blanco: #ffffff;
+        --color-noche: #071a3a;
+        --color-marino: #0f2f63;
+
+        --font-titulo: "Archivo Black", Impact, sans-serif;
+        --font-texto: "DM Sans", system-ui, sans-serif;
+    }
+</style>
+
 </head>
 
 <body>
@@ -37,14 +57,19 @@
                 </button>
 
                 <!-- Botón del menú (en móvil y tablet) -->
-                <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu"
-                        class="rounded-full border-2 border-azul bg-azul px-4 py-2 text-sm font-bold text-crema transition hover:bg-crema hover:text-azul lg:hidden dark:border-celeste dark:bg-celeste dark:text-noche">
-                    Menú
+                <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"
+                        class="relative grid size-11 place-items-center rounded-full border-2 border-azul bg-azul text-crema transition lg:hidden dark:border-celeste dark:bg-celeste dark:text-noche">
+                    <span class="hamburguesa" aria-hidden="true">
+                        <span class="hamburguesa-linea"></span>
+                        <span class="hamburguesa-linea"></span>
+                        <span class="hamburguesa-linea"></span>
+                    </span>
                 </button>
             </div>
 
-            <nav class="w-full lg:ml-auto lg:w-auto" aria-label="Principal">
-                <ul id="menu" class="hidden space-y-1 pb-3 lg:flex lg:items-center lg:gap-6 lg:space-y-0 lg:pb-0">
+            
+            <nav id="menu" class="w-full lg:ml-auto lg:w-auto" aria-label="Principal">
+                <ul class="space-y-1 pb-3 lg:flex lg:items-center lg:gap-6 lg:space-y-0 lg:pb-0">
                     <li><a href="#historia" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Nuestra historia</a></li>
                     <li><a href="carta.html" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">La carta</a></li>
                     <li><a href="#novedades" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Novedades</a></li>
@@ -319,9 +344,47 @@
         </section>
     </main>
 
-    </main>
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-azul text-crema dark:bg-marino">
+        <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3">
+            <div>
+                <img src="img/logo-blanco.svg" alt="A CA LA CHARO" width="752" height="687" class="h-24 w-auto">
+                <p class="mt-5 max-w-xs text-sm">Café y barra de barrio. Un bar de los de siempre, pero distinto.</p>
+            </div>
+            <nav aria-label="Pie de página">
+                <h2 class="font-titulo text-xl">La web</h2>
+                <ul class="mt-4 space-y-2">
+                    <li><a href="#historia" class="hover:text-celeste hover:underline">Nuestra historia</a></li>
+                    <li><a href="carta.html" class="hover:text-celeste hover:underline">La carta</a></li>
+                    <li><a href="#novedades" class="hover:text-celeste hover:underline">Novedades</a></li>
+                    <li><a href="#club" class="hover:text-celeste hover:underline">Club Charo</a></li>
+                    <li><a href="#visitanos" class="hover:text-celeste hover:underline">Dónde estamos</a></li>
+                    <li><a href="#pedidos" class="hover:text-celeste hover:underline">Pedir a domicilio</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h2 class="font-titulo text-xl">Te esperamos</h2>
+                <p class="mt-4 text-sm">Lunes a viernes: 8:00 – 20:00<br>Sábados y domingos: 9:00 – 17:00</p>
+                <p class="mt-4 text-sm">Calle de la Virgen de la Alegría, 14<br>28027 Madrid</p>
+            </div>
+        </div>
+        <div class="border-t border-crema/20 px-5 py-6 text-center text-sm opacity-80">
+            <p>© 2026 A CA LA CHARO · Café y barra de barrio · El Carmen, Madrid</p>
+        </div>
+    </footer>
 
+    <!-- Librerias de JS -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <!-- AOS y Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14/swiper-bundle.min.js"></script>
+
+    <!-- Menú, modo oscuro y cabecera -->
     <script src="js/main.js"></script>
+    <!-- Acordeón del Club Charo -->
+    <script src="js/club.js"></script>
+    <!-- Slider y animaciones al hacer scroll -->
+    <script src="js/librerias.js"></script>
 
 </body>
 </html>
