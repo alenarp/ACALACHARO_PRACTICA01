@@ -347,7 +347,7 @@
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Estilos decorativos de portada y cinta animada */
+/* Estilos decorativos de portada */
 .trazo {
     position: relative;
     display: inline-block;
@@ -363,6 +363,8 @@
     background: url("../img/trazo.svg") no-repeat center / 100% 100%;
 }
 
+/* cinta de texto animada */
+
 .cinta {
     animation: desplazar 30s linear infinite;
 }
@@ -374,4 +376,11 @@
     to {
         transform: translateX(-50%);
     }
+}
+
+/* Borde y sombra para que la oferta parezca un ticket */
+.ticket {
+    outline: 2px dashed var(--color-azul);
+    outline-offset: -12px;
+    box-shadow: 10px 10px 0 var(--color-celeste);
 }
