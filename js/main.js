@@ -5,20 +5,38 @@ const enlacesMenu = document.querySelectorAll('#menu a');
 
 // Menú abrir y cerrar
 botonMenu.addEventListener('click', function () {
-    menu.classList.toggle('hidden');
+    const abierto = document.documentElement.classList.toggle('menu-abierto');
 
-    const abierto = !menu.classList.contains('hidden');
     botonMenu.setAttribute('aria-expanded', abierto);
-    botonMenu.textContent = abierto ? 'Cerrar' : 'Menú';
+    botonMenu.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
 });
 
 // Cerrar menú al pulsar un enlace
 enlacesMenu.forEach(function (enlace) {
     enlace.addEventListener('click', function () {
-        menu.classList.add('hidden');
+        document.documentElement.classList.remove('menu-abierto');
         botonMenu.setAttribute('aria-expanded', 'false');
-        botonMenu.textContent = 'Menú';
+        botonMenu.setAttribute('aria-label', 'Abrir menú');
     });
+});
+
+// Cerrar menú con Escape
+document.addEventListener('keydown', function (evento) {
+    if (evento.key === 'Escape' && document.documentElement.classList.contains('menu-abierto')) {
+        document.documentElement.classList.remove('menu-abierto');
+        botonMenu.setAttribute('aria-expanded', 'false');
+        botonMenu.setAttribute('aria-label', 'Abrir menú');
+        botonMenu.focus();
+    }
+});
+
+// Cerrar menú al pasar a escritorio
+window.addEventListener('resize', function () {
+    if (window.innerWidth >= 1024) {
+        document.documentElement.classList.remove('menu-abierto');
+        botonMenu.setAttribute('aria-expanded', 'false');
+        botonMenu.setAttribute('aria-label', 'Abrir menú');
+    }
 });
 
 // Modo oscuro - modo claro
