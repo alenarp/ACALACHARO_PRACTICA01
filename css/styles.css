@@ -346,3 +346,32 @@
 .menu-abierto .hamburguesa-linea:last-child {
     transform: translateY(-8px) rotate(-45deg);
 }
+
+/* Estilos decorativos de portada y cinta animada */
+.trazo {
+    position: relative;
+    display: inline-block;
+}
+
+.trazo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0.3em;
+    bottom: -0.12em;
+    height: 0.14em;
+    background: url("../img/trazo.svg") no-repeat center / 100% 100%;
+}
+
+.cinta {
+    animation: desplazar 30s linear infinite;
+}
+
+@keyframes desplazar {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
