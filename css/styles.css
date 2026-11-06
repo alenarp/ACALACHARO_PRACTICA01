@@ -466,7 +466,7 @@
 .cartel-anterior,
 .cartel-siguiente {
     position: absolute;
-    top: 45%;
+    top: calc(50% - 1.5rem);
     z-index: 10;
     display: grid;
     place-items: center;
