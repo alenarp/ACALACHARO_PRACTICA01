@@ -15,6 +15,8 @@
 
     <!-- Nuestro CSS propio -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14/swiper-bundle.min.css">
+
 
 <!-- Tailwind y los colores de nuestra web -->
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -37,7 +39,7 @@
 
 </head>
 
-<body>
+<body class="bg-crema font-texto text-azul antialiased transition-colors duration-500 dark:bg-noche dark:text-crema">
     <header id="cabecera" class="cabecera-transparente fixed inset-x-0 top-0 z-30 border-b-2 border-azul bg-crema/95 backdrop-blur transition-colors duration-300 dark:border-celeste/40 dark:bg-noche/95">
         <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-3">
             <a href="#inicio" class="rounded-lg">
@@ -169,7 +171,8 @@
                 </div>
 
                 <!-- Slider de carteles con Swiper (js/librerias.js) -->
-                <div class="carteles swiper w-full max-w-sm" data-aos="fade-up" data-aos-delay="150">
+                    <div class="relative mx-auto mb-14 w-full min-w-0 max-w-sm md:mb-0" data-aos="fade-up" data-aos-delay="150">
+                    <div class="carteles swiper w-full">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="img/carteles/cartel-tortilla.webp" alt="Cartel de la tortilla de la Charo: con cebolla, obvio, y pan crujiente" width="720" height="905" class="w-full rounded-3xl">
@@ -182,9 +185,12 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
                 </div>
+
+                <!-- Flechas fuera de la imagen -->
+                <button type="button" class="cartel-anterior" aria-label="Cartel anterior">‹</button>
+                <button type="button" class="cartel-siguiente" aria-label="Cartel siguiente">›</button>
+            </div>
             </div>
 
         </section>
