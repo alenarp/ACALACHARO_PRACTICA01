@@ -31,5 +31,5 @@ const sliderCarteles = new Swiper('.carteles', {
 AOS.init({
     duration: 700,   
     once: true,     
-    offset: 80     3
+    offset: 80     
 });
