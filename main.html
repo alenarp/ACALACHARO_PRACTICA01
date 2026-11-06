@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A CA LA CHARO · Café y barra de barrio en El Carmen, Madrid</title>
+    <meta name="description" content="A CA LA CHARO: el bar de barrio de toda la vida, con café de especialidad y platos tradicionales reinventados. Barrio de El Carmen, Madrid.">
+    <link rel="icon" href="img/logo-azul.svg" type="image/svg+xml">
+
+    <!-- Tipografías: Archivo Black (títulos) y DM Sans (textos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;display=swap" rel="stylesheet">
+
+
+    <!-- Nuestro CSS propio -->
+    <link rel="stylesheet" href="css/styles.css">
+
+<!-- Tailwind y los colores de nuestra web -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+
+    @theme static {
+        --color-azul: #0d3d82;
+        --color-celeste: #8bbbe5;
+        --color-crema: #f8f4e8;
+        --color-blanco: #ffffff;
+        --color-noche: #071a3a;
+        --color-marino: #0f2f63;
+
+        --font-titulo: "Archivo Black", Impact, sans-serif;
+        --font-texto: "DM Sans", system-ui, sans-serif;
+    }
+</style>
+
+</head>
+
+<body>
+    <header id="cabecera" class="cabecera-transparente fixed inset-x-0 top-0 z-30 border-b-2 border-azul bg-crema/95 backdrop-blur transition-colors duration-300 dark:border-celeste/40 dark:bg-noche/95">
+        <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-3">
+            <a href="#inicio" class="rounded-lg">
+                <!-- Un logo para cada modo: dark:hidden / dark:block -->
+                <img src="img/logo-azul.svg" alt="A CA LA CHARO, ir al inicio" width="752" height="687" class="logo-azul h-12 w-auto md:h-14 dark:hidden">
+                <img src="img/logo-blanco.svg" alt="A CA LA CHARO, ir al inicio" width="752" height="687" class="logo-blanco hidden h-12 w-auto md:h-14 dark:block">
+            </a>
+
+            <div class="flex items-center gap-2 lg:order-last">
+                <!-- Botón de modo claro / oscuro: solo icono (luna o sol) -->
+                <button id="boton-tema" type="button" aria-pressed="false" aria-label="Modo oscuro" title="Cambiar entre modo claro y oscuro"
+                        class="grid size-11 place-items-center rounded-full border-2 border-azul transition hover:bg-azul hover:text-crema dark:border-celeste dark:text-celeste dark:hover:bg-celeste dark:hover:text-noche">
+                    <!-- Luna (se ve en modo claro) -->
+                    <svg class="size-5 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                    <!-- Sol (se ve en modo oscuro) -->
+                    <svg class="hidden size-5 dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                </button>
+
+                <!-- Botón del menú (en móvil y tablet) -->
+                <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"
+                        class="relative grid size-11 place-items-center rounded-full border-2 border-azul bg-azul text-crema transition lg:hidden dark:border-celeste dark:bg-celeste dark:text-noche">
+                    <span class="hamburguesa" aria-hidden="true">
+                        <span class="hamburguesa-linea"></span>
+                        <span class="hamburguesa-linea"></span>
+                        <span class="hamburguesa-linea"></span>
+                    </span>
+                </button>
+            </div>
+
+            
+            <nav id="menu" class="w-full lg:ml-auto lg:w-auto" aria-label="Principal">
+                <ul class="space-y-1 pb-3 lg:flex lg:items-center lg:gap-6 lg:space-y-0 lg:pb-0">
+                    <li><a href="#historia" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Nuestra historia</a></li>
+                    <li><a href="carta.html" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">La carta</a></li>
+                    <li><a href="#novedades" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Novedades</a></li>
+                    <li><a href="#club" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Club Charo</a></li>
+                    <li><a href="#visitanos" class="enlace-menu block py-2 text-sm font-bold tracking-wider uppercase">Dónde estamos</a></li>
+                    <li><a href="#pedidos" class="mt-2 inline-block rounded-full bg-azul px-5 py-2 text-sm font-bold tracking-wider text-crema uppercase transition hover:bg-celeste hover:text-azul lg:mt-0 dark:bg-celeste dark:text-noche dark:hover:bg-crema">Pedir a domicilio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO / PORTADA -->
+         <!-- BANNER SUPERIOR -->
+        <!-- VÍDEO DE FONDO Y DEGRADADO AZUL SUTIL POR ENCIMA DEL VÍDEO -->
+        <section id="inicio" class="relative flex min-h-svh items-end overflow-hidden">
+            <video class="absolute inset-0 size-full object-cover" autoplay muted loop playsinline poster="img/portada-video.webp" aria-hidden="true">
+                <source src="video/portada.mp4" type="video/mp4">
+            </video>
+            <!-- Degradado azul: más fuerte a la izquierda, donde va el texto (en móvil, un poco de azul en toda la imagen) -->
+            <div class="absolute inset-0 bg-azul/40 bg-linear-to-r from-azul/90 via-azul/50 to-transparent md:bg-transparent dark:bg-noche/40 dark:from-noche/90 dark:via-noche/50 md:dark:bg-transparent"></div>
+            <!-- Sombra suave arriba para que se lea la cabecera -->
+            <div class="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-azul/60 to-transparent dark:from-noche/60"></div>
+
+            <div class="relative mx-auto w-full max-w-6xl px-5 pt-36 pb-20 text-crema md:pb-28">
+                <h1 class="max-w-4xl font-titulo text-5xl leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl">
+                    Un bar de los<br>de siempre,<br><span class="trazo text-celeste">pero distinto.</span>
+                </h1>
+                <p class="mt-10 max-w-md text-lg">Pasa, que la Charo ya te está poniendo el café. Y si quieres tortilla, con cebolla (obvio).</p>
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <a href="carta.html" class="rounded-full border-2 border-crema bg-crema px-8 py-3 text-sm font-bold tracking-[0.2em] text-azul uppercase transition hover:-translate-y-0.5 hover:border-celeste hover:bg-celeste">Ver la carta</a>
+                    <a href="#visitanos" class="rounded-full border-2 border-crema px-8 py-3 text-sm font-bold tracking-[0.2em] uppercase transition hover:-translate-y-0.5 hover:bg-crema hover:text-azul">Dónde estamos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cinta decorativa con texto en movimiento (@keyframes desplazar) -->
+        <div class="overflow-hidden border-y-2 border-azul bg-azul py-3 text-crema dark:border-celeste/40 dark:bg-marino" aria-hidden="true">
+            <div class="cinta flex w-max gap-8 pr-8 font-titulo text-xl">
+                <span>Café de especialidad</span><span>✦</span>
+                <span>Tortilla al momento</span><span>✦</span>
+                <span>Bocatas con fundamento</span><span>✦</span>
+                <span>Batidos de fruta de verdad</span><span>✦</span>
+                <span>Café de especialidad</span><span>✦</span>
+                <span>Tortilla al momento</span><span>✦</span>
+                <span>Bocatas con fundamento</span><span>✦</span>
+                <span>Batidos de fruta de verdad</span><span>✦</span>
+            </div>
+        </div>
+
+        <!-- ================= NUESTRA HISTORIA ================= -->
+        <section id="historia" class="bg-blanco py-20 md:py-28 dark:bg-marino">
+            <div class="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-2 lg:items-center">
+                <div data-aos="fade-up">
+                    <p class="etiqueta">Nuestra historia</p>
+                    <h2 class="mt-5 font-titulo text-4xl leading-none tracking-tight md:text-5xl">
+                        La Charo no ha inventado nada (bueno, un poco sí)
+                    </h2>
+                    <p class="mt-6 text-lg">
+                        A CA LA CHARO nace de las ganas de darle una vuelta al típico bar de barrio, pero sin perder lo que lo hace especial: los cafés de toda la vida, las tortillas, las charlas en la barra y ese ambiente en el que todo el mundo se conoce.
+                    </p>
+                    <p class="mt-4">
+                        Nos gusta lo de siempre, pero también probar cosas nuevas. Por eso, combinamos el café de especialidad con buenos productos y platos tradicionales a los que les damos nuestro toque. Todo con la misma idea: comer bien, estar a gusto y sentirse como en casa.
+                    </p>
+                </div>
+
+                <!-- Foto de la fachada del bar -->
+                <figure data-aos="fade-up" data-aos-delay="150">
+                    <img src="img/fachada.webp" alt="Fachada de A CA LA CHARO con el rótulo y el toldo de azulejos azules" width="900" height="804" loading="lazy"
+                         class="w-full rounded-3xl border-2 border-azul shadow-[10px_10px_0_var(--color-celeste)] dark:border-celeste/40">
+                </figure>
+            </div>
+        </section>
+
+        <!-- ================= OFERTAS Y NOVEDADES ================= -->
+        <section id="novedades" class="bg-azul text-crema dark:bg-marino">
+            <div class="franja-azulejo franja-clara" aria-hidden="true"></div>
+            <div class="mx-auto grid max-w-6xl items-center gap-14 px-5 py-20 md:grid-cols-2 md:py-28">
+                <div data-aos="fade-up">
+                    <p class="etiqueta">Ofertas y novedades</p>
+                    <h2 class="mt-5 font-titulo text-4xl leading-none tracking-tight md:text-5xl">Lo nuevo de la casa</h2>
+                    <p class="mt-5 max-w-md text-lg">Cada temporada la Charo se viene arriba con algo nuevo. Estos son los platos que más se están comentando en la barra.</p>
+
+                    <!-- Oferta: tarjeta con forma de ticket -->
+                    <article class="ticket mt-10 max-w-md rotate-[-2deg] rounded-3xl bg-crema p-8 text-azul transition hover:rotate-0">
+                        <p class="text-xs font-bold tracking-widest uppercase">Oferta · Lunes a viernes hasta las 12:00</p>
+                        <h3 class="mt-3 font-titulo text-3xl leading-none">El desayuno de la Charo</h3>
+                        <p class="mt-3">Café con leche + croissant mixto (sí, el francés que se vino arriba).</p>
+                        <p class="mt-5 flex items-end gap-3">
+                            <span class="font-titulo text-5xl">6,50 €</span>
+                            <span class="pb-1 text-sm line-through opacity-60">9,70 €</span>
+                        </p>
+                    </article>
+
+                    <a href="carta.html" class="mt-12 inline-flex items-center gap-3 rounded-full border-2 border-celeste bg-celeste px-7 py-3 text-lg font-bold text-azul transition hover:-translate-y-0.5 hover:border-crema hover:bg-crema dark:text-noche">Ver la carta completa <span aria-hidden="true">→</span></a>
+                </div>
+
+                <!-- Slider de carteles con Swiper (js/librerias.js) -->
+                <div class="carteles swiper w-full max-w-sm" data-aos="fade-up" data-aos-delay="150">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/carteles/cartel-tortilla.webp" alt="Cartel de la tortilla de la Charo: con cebolla, obvio, y pan crujiente" width="720" height="905" class="w-full rounded-3xl">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/carteles/cartel-chismosa.webp" alt="Cartel de La Chismosa: bol de yogur con arándanos, coco, frutas y crema de maní" width="720" height="905" class="w-full rounded-3xl">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/carteles/cartel-club-paula.webp" alt="Cartel de El Club de Paula: pollo, ensalada fresca, guanciale frito y queso de Valsequillo" width="720" height="904" class="w-full rounded-3xl">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= CLUB CHARO (FIDELIZACIÓN) ================= -->
+        <section id="club" class="pt-20 md:pt-28">
+            <div class="mx-auto max-w-3xl px-5 text-center" data-aos="fade-up">
+                <h2>
+                    <img src="img/logo-club-azul.svg" alt="El club de la Charo" width="1684" height="1090" class="mx-auto w-64 md:w-80 dark:hidden">
+                    <img src="img/logo-club-blanco.svg" alt="El club de la Charo" width="1684" height="1090" class="mx-auto hidden w-64 md:w-80 dark:block">
+                </h2>
+                <p class="mt-6 text-lg">Cada 5 sellos, subes de nivel. Pide tu tarjeta en la barra.</p>
+            </div>
+
+            <!-- Acordeón de niveles (jQuery, en js/club.js) -->
+            <div class="mt-12 border-t-2 border-azul dark:border-celeste/40">
+                <!-- Nivel 1: Charita -->
+                <article class="nivel bg-blanco dark:bg-marino">
+                    <h3>
+                        <button type="button" class="nivel-boton mx-auto block w-full max-w-6xl px-5 py-7 text-center" aria-expanded="false" aria-controls="nivel-1">
+                            <span class="block font-titulo text-5xl leading-none tracking-tight sm:text-7xl lg:text-8xl">Charita</span>
+                            <span class="mt-3 inline-flex items-center gap-3 text-xs font-bold tracking-widest uppercase sm:text-sm">
+                                Nivel 1 · De 0 a 5 sellos · Empiezas aquí
+                                <span class="mas grid size-7 place-items-center rounded-full border-2 border-current" aria-hidden="true"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M12 4v16M4 12h16"/></svg></span>
+                            </span>
+                        </button>
+                    </h3>
+                    <div id="nivel-1" class="nivel-detalle hidden">
+                        <div class="mx-auto grid max-w-4xl gap-8 px-5 pb-12 md:grid-cols-[auto_1fr] md:items-start">
+                            <span class="mx-auto grid size-24 place-items-center rounded-full bg-crema"><img src="img/iconos/cafe.svg" alt="" width="530" height="502" class="w-20"></span>
+                            <div>
+                                <p class="text-lg font-medium">Acabas de llegar al barrio y ya te estamos guardando sitio en la barra.</p>
+                                <ul class="ventajas mt-6 grid gap-4 sm:grid-cols-2">
+                                <li>Tu primer café con leche, a mitad de precio.</li>
+                                <li>Con 5 sellos, un café de regalo.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!-- Nivel 2: Charote -->
+                <article class="nivel bg-celeste/50 dark:bg-celeste/20">
+                    <h3>
+                        <button type="button" class="nivel-boton mx-auto block w-full max-w-6xl px-5 py-7 text-center" aria-expanded="false" aria-controls="nivel-2">
+                            <span class="block font-titulo text-5xl leading-none tracking-tight sm:text-7xl lg:text-8xl">Charote</span>
+                            <span class="mt-3 inline-flex items-center gap-3 text-xs font-bold tracking-widest uppercase sm:text-sm">
+                                Nivel 2 · De 6 a 10 sellos
+                                <span class="mas grid size-7 place-items-center rounded-full border-2 border-current" aria-hidden="true"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M12 4v16M4 12h16"/></svg></span>
+                            </span>
+                        </button>
+                    </h3>
+                    <div id="nivel-2" class="nivel-detalle hidden">
+                        <div class="mx-auto grid max-w-4xl gap-8 px-5 pb-12 md:grid-cols-[auto_1fr] md:items-start">
+                            <span class="mx-auto grid size-24 place-items-center rounded-full bg-crema"><img src="img/iconos/croissant.svg" alt="" width="530" height="502" class="w-20"></span>
+                            <div>
+                                <p class="text-lg font-medium">Ya te sabemos el nombre y cómo te gusta el café (templadito, ¿verdad?).</p>
+                                <ul class="ventajas mt-6 grid gap-4 sm:grid-cols-2">
+                                <li>Todo lo de Charita.</li>
+                                <li>Un pincho de tortilla gratis con tu café de los lunes.</li>
+                                <li>Un batido de regalo en la semana de tu cumpleaños.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                 <!-- Nivel 3: La Charo -->
+                <article class="nivel bg-azul text-crema dark:bg-celeste dark:text-noche">
+                    <h3>
+                        <button type="button" class="nivel-boton mx-auto block w-full max-w-6xl px-5 py-7 text-center" aria-expanded="false" aria-controls="nivel-3">
+                            <span class="block font-titulo text-5xl leading-none tracking-tight sm:text-7xl lg:text-8xl">La Charo</span>
+                            <span class="mt-3 inline-flex items-center gap-3 text-xs font-bold tracking-widest uppercase sm:text-sm">
+                                Nivel 3 · Más de 10 sellos · Nivel máximo
+                                <span class="mas grid size-7 place-items-center rounded-full border-2 border-current" aria-hidden="true"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M12 4v16M4 12h16"/></svg></span>
+                            </span>
+                        </button>
+                    </h3>
+                    <div id="nivel-3" class="nivel-detalle hidden">
+                        <div class="mx-auto grid max-w-4xl gap-8 px-5 pb-12 md:grid-cols-[auto_1fr] md:items-start">
+                            <span class="mx-auto grid size-24 place-items-center rounded-full bg-crema"><img src="img/iconos/brunch.svg" alt="" width="530" height="502" class="w-20"></span>
+                            <div>
+                                <p class="text-lg font-medium">Ya eres de la familia. A estas alturas, la Charo eres tú.</p>
+                                <ul class="ventajas mt-6 grid gap-4 sm:grid-cols-2">
+                                <li>Un café de especialidad gratis cada semana.</li>
+                                <li>Un 10 % de descuento en toda la carta.</li>
+                                <li>Tu nombre en la pizarra del bar durante un mes.</li>
+                                <li>La taza oficial de A CA LA CHARO, para tu casa.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= DÓNDE ESTAMOS ================= -->
+        <section id="visitanos" class="py-20 md:py-28">
+            <div class="mx-auto max-w-6xl px-5">
+                <div class="text-center" data-aos="fade-up">
+                    <p class="etiqueta">Dónde estamos</p>
+                    <h2 class="mt-5 font-titulo text-4xl leading-none tracking-tight md:text-5xl">Baja, que estamos aquí al lado</h2>
+                </div>
+
+                <div class="mt-12 grid gap-6 lg:grid-cols-3">
+                    <!-- Horario -->
+                    <article class="rounded-3xl bg-azul p-8 text-crema dark:bg-marino">
+                        <h3 class="font-titulo text-2xl">Horario</h3>
+                        <dl class="mt-6 divide-y divide-crema/25">
+                            <div class="flex justify-between gap-4 py-3">
+                                <dt>Lunes a viernes</dt>
+                                <dd class="font-bold">8:00 – 20:00</dd>
+                            </div>
+                            <div class="flex justify-between gap-4 py-3">
+                                <dt>Sábados y domingos</dt>
+                                <dd class="font-bold">9:00 – 17:00</dd>
+                            </div>
+                        </dl>
+                        <p class="mt-6 text-sm opacity-80">El desayuno de la Charo, de lunes a viernes hasta las 12:00.</p>
+                    </article>
+                
+                    <!-- Dirección y contacto -->
+                    <article class="rounded-3xl border-2 border-azul bg-blanco p-8 dark:border-celeste/40 dark:bg-marino">
+                        <h3 class="font-titulo text-2xl">Dirección</h3>
+                        <address class="mt-4 text-lg not-italic">
+                            Calle de la Virgen de la Alegría, 14<br>
+                            28027 Madrid · Barrio de El Carmen
+                        </address>
+                        <p class="mt-2 text-sm opacity-80">Metro El Carmen (línea 5)</p>
+
+                        <h3 class="mt-8 font-titulo text-2xl">Contacto</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="tel:+34910000000" class="font-bold underline decoration-celeste decoration-2 underline-offset-4 hover:decoration-azul dark:hover:decoration-crema">910 000 000</a></li>
+                            <li><a href="mailto:hola@acalacharo.example" class="font-bold underline decoration-celeste decoration-2 underline-offset-4 hover:decoration-azul dark:hover:decoration-crema">hola@acalacharo.example</a></li>
+                        </ul>
+                    </article>
+
+                    <!-- Mapa del barrio -->
+                    <div class="min-h-80 overflow-hidden rounded-3xl border-2 border-azul dark:border-celeste/40">
+                        <iframe title="Mapa del barrio de El Carmen, en Madrid"
+                                src="https://www.google.com/maps?q=Barrio+de+El+Carmen,+Madrid&amp;z=15&amp;output=embed"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="h-full min-h-80 w-full dark:invert-[0.9] dark:hue-rotate-180"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PEDIDOS A DOMICILIO ================= -->
+        <section id="pedidos" class="fondo-patron patron-suave px-5 py-20 md:py-24">
+            <div class="mx-auto max-w-xl rounded-3xl border-4 border-azul bg-azul px-6 py-12 text-center text-crema sm:px-12 dark:border-celeste dark:bg-noche" data-aos="zoom-in">
+                <span class="mx-auto grid size-20 place-items-center rounded-full bg-crema"><img src="img/iconos/bocadillo.svg" alt="" width="530" height="502" class="repartidor w-16"></span>
+                <h2 class="mt-6 font-titulo text-3xl leading-none tracking-tight md:text-4xl">¿Te apetece pedir desde casa?</h2>
+                <p class="mt-4 text-lg">La Charo te lo lleva calentito.</p>
+                <div class="mt-8">
+                    <a href="https://glovoapp.com/" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full border-2 border-celeste bg-celeste px-8 py-4 text-lg font-bold text-azul transition hover:-translate-y-0.5 hover:bg-crema hover:border-crema dark:text-noche">Pedir a domicilio <span aria-hidden="true">↗</span><span class="sr-only"> (se abre Glovo en una pestaña nueva)</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-azul text-crema dark:bg-marino">
+        <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3">
+            <div>
+                <img src="img/logo-blanco.svg" alt="A CA LA CHARO" width="752" height="687" class="h-24 w-auto">
+                <p class="mt-5 max-w-xs text-sm">Café y barra de barrio. Un bar de los de siempre, pero distinto.</p>
+            </div>
+            <nav aria-label="Pie de página">
+                <h2 class="font-titulo text-xl">La web</h2>
+                <ul class="mt-4 space-y-2">
+                    <li><a href="#historia" class="hover:text-celeste hover:underline">Nuestra historia</a></li>
+                    <li><a href="carta.html" class="hover:text-celeste hover:underline">La carta</a></li>
+                    <li><a href="#novedades" class="hover:text-celeste hover:underline">Novedades</a></li>
+                    <li><a href="#club" class="hover:text-celeste hover:underline">Club Charo</a></li>
+                    <li><a href="#visitanos" class="hover:text-celeste hover:underline">Dónde estamos</a></li>
+                    <li><a href="#pedidos" class="hover:text-celeste hover:underline">Pedir a domicilio</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h2 class="font-titulo text-xl">Te esperamos</h2>
+                <p class="mt-4 text-sm">Lunes a viernes: 8:00 – 20:00<br>Sábados y domingos: 9:00 – 17:00</p>
+                <p class="mt-4 text-sm">Calle de la Virgen de la Alegría, 14<br>28027 Madrid</p>
+            </div>
+        </div>
+        <div class="border-t border-crema/20 px-5 py-6 text-center text-sm opacity-80">
+            <p>© 2026 A CA LA CHARO · Café y barra de barrio · El Carmen, Madrid</p>
+        </div>
+    </footer>
+
+    <!-- Librerias de JS -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <!-- AOS y Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14/swiper-bundle.min.js"></script>
+
+    <!-- Menú, modo oscuro y cabecera -->
+    <script src="js/main.js"></script>
+    <!-- Acordeón del Club Charo -->
+    <script src="js/club.js"></script>
+    <!-- Slider y animaciones al hacer scroll -->
+    <script src="js/librerias.js"></script>
+
+</body>
+</html>
