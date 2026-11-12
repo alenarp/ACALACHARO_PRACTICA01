@@ -6,17 +6,17 @@
     <title>A CA LA CHARO · Café y barra de barrio en El Carmen, Madrid</title>
     <meta name="description" content="A CA LA CHARO: el bar de barrio de toda la vida, con café de especialidad y platos tradicionales reinventados. Barrio de El Carmen, Madrid.">
     <link rel="icon" href="img/logo-azul.svg" type="image/svg+xml">
-
-    <!-- Tipografías: Archivo Black (títulos) y DM Sans (textos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;display=swap" rel="stylesheet">
 
 
-    <!-- Nuestro CSS propio -->
+    <!-- CSS propio -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14/swiper-bundle.min.css">
 
-<!-- Tailwind y los colores de nuestra web -->
+
+<!-- Tailwind -->
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 <style type="text/tailwindcss">
@@ -37,26 +37,21 @@
 
 </head>
 
-<body>
+<body class="bg-crema font-texto text-azul antialiased transition-colors duration-500 dark:bg-noche dark:text-crema">
     <header id="cabecera" class="cabecera-transparente fixed inset-x-0 top-0 z-30 border-b-2 border-azul bg-crema/95 backdrop-blur transition-colors duration-300 dark:border-celeste/40 dark:bg-noche/95">
         <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-3">
             <a href="#inicio" class="rounded-lg">
-                <!-- Un logo para cada modo: dark:hidden / dark:block -->
                 <img src="img/logo-azul.svg" alt="A CA LA CHARO, ir al inicio" width="752" height="687" class="logo-azul h-12 w-auto md:h-14 dark:hidden">
                 <img src="img/logo-blanco.svg" alt="A CA LA CHARO, ir al inicio" width="752" height="687" class="logo-blanco hidden h-12 w-auto md:h-14 dark:block">
             </a>
 
             <div class="flex items-center gap-2 lg:order-last">
-                <!-- Botón de modo claro / oscuro: solo icono (luna o sol) -->
+                <!-- Botón de modo claro / oscuro -->
                 <button id="boton-tema" type="button" aria-pressed="false" aria-label="Modo oscuro" title="Cambiar entre modo claro y oscuro"
                         class="grid size-11 place-items-center rounded-full border-2 border-azul transition hover:bg-azul hover:text-crema dark:border-celeste dark:text-celeste dark:hover:bg-celeste dark:hover:text-noche">
-                    <!-- Luna (se ve en modo claro) -->
                     <svg class="size-5 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-                    <!-- Sol (se ve en modo oscuro) -->
                     <svg class="hidden size-5 dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
                 </button>
-
-                <!-- Botón del menú (en móvil y tablet) -->
                 <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"
                         class="relative grid size-11 place-items-center rounded-full border-2 border-azul bg-azul text-crema transition lg:hidden dark:border-celeste dark:bg-celeste dark:text-noche">
                     <span class="hamburguesa" aria-hidden="true">
@@ -83,16 +78,13 @@
 
     <main>
 
-        <!-- HERO / PORTADA -->
-         <!-- BANNER SUPERIOR -->
-        <!-- VÍDEO DE FONDO Y DEGRADADO AZUL SUTIL POR ENCIMA DEL VÍDEO -->
+        <!-- HERO -->
+
         <section id="inicio" class="relative flex min-h-svh items-end overflow-hidden">
             <video class="absolute inset-0 size-full object-cover" autoplay muted loop playsinline poster="img/portada-video.webp" aria-hidden="true">
                 <source src="video/portada.mp4" type="video/mp4">
             </video>
-            <!-- Degradado azul: más fuerte a la izquierda, donde va el texto (en móvil, un poco de azul en toda la imagen) -->
             <div class="absolute inset-0 bg-azul/40 bg-linear-to-r from-azul/90 via-azul/50 to-transparent md:bg-transparent dark:bg-noche/40 dark:from-noche/90 dark:via-noche/50 md:dark:bg-transparent"></div>
-            <!-- Sombra suave arriba para que se lea la cabecera -->
             <div class="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-azul/60 to-transparent dark:from-noche/60"></div>
 
             <div class="relative mx-auto w-full max-w-6xl px-5 pt-36 pb-20 text-crema md:pb-28">
@@ -107,7 +99,7 @@
             </div>
         </section>
 
-        <!-- Cinta decorativa con texto en movimiento (@keyframes desplazar) -->
+        <!-- Cinta de texto -->
         <div class="overflow-hidden border-y-2 border-azul bg-azul py-3 text-crema dark:border-celeste/40 dark:bg-marino" aria-hidden="true">
             <div class="cinta flex w-max gap-8 pr-8 font-titulo text-xl">
                 <span>Café de especialidad</span><span>✦</span>
@@ -136,8 +128,6 @@
                         Nos gusta lo de siempre, pero también probar cosas nuevas. Por eso, combinamos el café de especialidad con buenos productos y platos tradicionales a los que les damos nuestro toque. Todo con la misma idea: comer bien, estar a gusto y sentirse como en casa.
                     </p>
                 </div>
-
-                <!-- Foto de la fachada del bar -->
                 <figure data-aos="fade-up" data-aos-delay="150">
                     <img src="img/fachada.webp" alt="Fachada de A CA LA CHARO con el rótulo y el toldo de azulejos azules" width="900" height="804" loading="lazy"
                          class="w-full rounded-3xl border-2 border-azul shadow-[10px_10px_0_var(--color-celeste)] dark:border-celeste/40">
@@ -153,8 +143,6 @@
                     <p class="etiqueta">Ofertas y novedades</p>
                     <h2 class="mt-5 font-titulo text-4xl leading-none tracking-tight md:text-5xl">Lo nuevo de la casa</h2>
                     <p class="mt-5 max-w-md text-lg">Cada temporada la Charo se viene arriba con algo nuevo. Estos son los platos que más se están comentando en la barra.</p>
-
-                    <!-- Oferta: tarjeta con forma de ticket -->
                     <article class="ticket mt-10 max-w-md rotate-[-2deg] rounded-3xl bg-crema p-8 text-azul transition hover:rotate-0">
                         <p class="text-xs font-bold tracking-widest uppercase">Oferta · Lunes a viernes hasta las 12:00</p>
                         <h3 class="mt-3 font-titulo text-3xl leading-none">El desayuno de la Charo</h3>
@@ -167,9 +155,8 @@
 
                     <a href="carta.html" class="mt-12 inline-flex items-center gap-3 rounded-full border-2 border-celeste bg-celeste px-7 py-3 text-lg font-bold text-azul transition hover:-translate-y-0.5 hover:border-crema hover:bg-crema dark:text-noche">Ver la carta completa <span aria-hidden="true">→</span></a>
                 </div>
-
-                <!-- Slider de carteles con Swiper (js/librerias.js) -->
-                <div class="carteles swiper w-full max-w-sm" data-aos="fade-up" data-aos-delay="150">
+                    <div class="relative mx-auto mb-14 w-full min-w-0 max-w-sm md:mb-0" data-aos="fade-up" data-aos-delay="150">
+                    <div class="carteles swiper w-full">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="img/carteles/cartel-tortilla.webp" alt="Cartel de la tortilla de la Charo: con cebolla, obvio, y pan crujiente" width="720" height="905" class="w-full rounded-3xl">
@@ -182,14 +169,15 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
                 </div>
+                <button type="button" class="cartel-anterior" aria-label="Cartel anterior">‹</button>
+                <button type="button" class="cartel-siguiente" aria-label="Cartel siguiente">›</button>
+            </div>
             </div>
 
         </section>
 
-        <!-- ================= CLUB CHARO (FIDELIZACIÓN) ================= -->
+        <!-- ================= CLUB CHARO  ================= -->
         <section id="club" class="pt-20 md:pt-28">
             <div class="mx-auto max-w-3xl px-5 text-center" data-aos="fade-up">
                 <h2>
@@ -198,10 +186,7 @@
                 </h2>
                 <p class="mt-6 text-lg">Cada 5 sellos, subes de nivel. Pide tu tarjeta en la barra.</p>
             </div>
-
-            <!-- Acordeón de niveles (jQuery, en js/club.js) -->
             <div class="mt-12 border-t-2 border-azul dark:border-celeste/40">
-                <!-- Nivel 1: Charita -->
                 <article class="nivel bg-blanco dark:bg-marino">
                     <h3>
                         <button type="button" class="nivel-boton mx-auto block w-full max-w-6xl px-5 py-7 text-center" aria-expanded="false" aria-controls="nivel-1">
@@ -225,7 +210,6 @@
                         </div>
                     </div>
                 </article>
-                <!-- Nivel 2: Charote -->
                 <article class="nivel bg-celeste/50 dark:bg-celeste/20">
                     <h3>
                         <button type="button" class="nivel-boton mx-auto block w-full max-w-6xl px-5 py-7 text-center" aria-expanded="false" aria-controls="nivel-2">
@@ -250,7 +234,6 @@
                         </div>
                     </div>
                 </article>
-                 <!-- Nivel 3: La Charo -->
                 <article class="nivel bg-azul text-crema dark:bg-celeste dark:text-noche">
                     <h3>
                         <button type="button" class="nivel-boton mx-auto block w-full max-w-6xl px-5 py-7 text-center" aria-expanded="false" aria-controls="nivel-3">
@@ -320,7 +303,7 @@
                         </ul>
                     </article>
 
-                    <!-- Mapa del barrio -->
+                    <!-- Mapa -->
                     <div class="min-h-80 overflow-hidden rounded-3xl border-2 border-azul dark:border-celeste/40">
                         <iframe title="Mapa del barrio de El Carmen, en Madrid"
                                 src="https://www.google.com/maps?q=Barrio+de+El+Carmen,+Madrid&amp;z=15&amp;output=embed"
@@ -379,11 +362,8 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@14/swiper-bundle.min.js"></script>
 
-    <!-- Menú, modo oscuro y cabecera -->
     <script src="js/main.js"></script>
-    <!-- Acordeón del Club Charo -->
     <script src="js/club.js"></script>
-    <!-- Slider y animaciones al hacer scroll -->
     <script src="js/librerias.js"></script>
 
 </body>
