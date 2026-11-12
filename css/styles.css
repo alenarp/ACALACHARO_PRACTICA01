@@ -629,3 +629,65 @@
     background-image: url("../img/patron-claro.svg");
 }
 
+
+
+/* ================= CABECERA DEL CLUB ================= */
+
+/* Patrón de platos detrás del logo*/
+.club-patron {
+    position: absolute;
+    inset: 0;
+    background-image: url("../img/club/patron-platos.webp");
+    background-size: 380px;
+    background-position: left center;
+    opacity: 0.16;
+    -webkit-mask-image: linear-gradient(to bottom, #000 35%, transparent 80%);
+    mask-image: linear-gradient(to bottom, #000 35%, transparent 80%);
+    pointer-events: none;
+}
+
+@media (min-width: 768px) {
+    .club-patron {
+        -webkit-mask-image: linear-gradient(to right, #000 0%, #000 38%, transparent 58%);
+        mask-image: linear-gradient(to right, #000 0%, #000 38%, transparent 58%);
+    }
+}
+
+/* modo oscuro patrón */
+.dark .club-patron {
+    filter: brightness(0) invert(1);
+    opacity: 0.1;
+}
+
+/* subrayo a mano */
+.club-subrayado {
+    position: relative;
+    white-space: nowrap;
+}
+
+.club-subrayado::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.15em;
+    height: 0.16em;
+    background: url("../img/trazo.svg") no-repeat center / 100% 100%;
+}
+
+/* Composición de estrellas (imagen) */
+.estrellas {
+    width: 100%;
+    max-width: 34rem;
+    margin-inline: auto;
+}
+
+.estrellas img {
+    height: auto;
+    transition: rotate 0.4s ease, scale 0.4s ease;
+}
+
+.estrellas:hover img {
+    rotate: -2deg;
+    scale: 1.03;
+}
