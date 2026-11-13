@@ -59,8 +59,8 @@
     }
 
     .dark {
-    color-scheme: dark;
-}
+        color-scheme: dark;
+    }
 }
 
 .etiqueta {
@@ -221,12 +221,6 @@
 .dark .precio {
     background: var(--color-celeste);
     color: var(--color-noche);
-}
-
-.dark .patron-suave {
-    position: relative;
-    isolation: isolate;
-    background-image: none;
 }
 
 .dark .patron-suave::before {
@@ -524,11 +518,11 @@
     }
 
     .cartel-anterior {
-        left: 18%;
+        left: 5px;
     }
 
     .cartel-siguiente {
-        right: 18%;
+        right: 5px;
     }
 
     .cartel-anterior:hover,
@@ -536,21 +530,6 @@
         transform: scale(1.1);
     }
 }
-
-
-
-
-/* En móvil acercamos las flechas para que no se corten */
-@media (max-width: 767px) {
-    .cartel-anterior {
-        left: 5px;
-    }
-
-    .cartel-siguiente {
-        right: 5px;
-    }
-}
-
 
 /* Las rayitas del menú se ven azules sobre el botón crema de la portada */
 .cabecera-transparente:not(.con-fondo) .hamburguesa-linea {
@@ -564,7 +543,7 @@
     }
 }
 
-/* nivlees de charo */
+/* Niveles del Club Charo */
 .nivel-boton {
     cursor: pointer;
 }
@@ -633,7 +612,8 @@
 /* Movimiento reducido para usuarios que lo tengan activado */
 @media (prefers-reduced-motion: reduce) {
     .cinta,
-    .repartidor {
+    .repartidor,
+    .ficha[open] {
         animation: none;
     }
 
@@ -641,7 +621,10 @@
     .plato img,
     .precio,
     .hamburguesa-linea,
-    .enlace-menu::after {
+    .enlace-menu::after,
+    .cartel-anterior,
+    .cartel-siguiente,
+    #menu {
         transition: none;
     }
 
