@@ -629,3 +629,23 @@
     background-image: url("../img/patron-claro.svg");
 }
 
+
+/* Movimiento reducido para usuarios que lo tengan activado */
+@media (prefers-reduced-motion: reduce) {
+    .cinta,
+    .repartidor {
+        animation: none;
+    }
+
+    .plato,
+    .plato img,
+    .precio,
+    .hamburguesa-linea,
+    .enlace-menu::after {
+        transition: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
